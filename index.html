@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Bootstrap Paginator</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+
+        <div class="table-responsive" >
+            <table class="table" id="example1" data-bstp="do" data-bstp-show="3" data-bstp-style="full" data-bstp-align="center">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Table heading</th>
+                    <th>Table heading</th>
+                    <th>Table heading</th>
+                    <th>Table heading</th>
+                    <th>Table heading</th>
+                    <th>Table heading</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+                <tr  class="a">
+                    <td>3</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+                <tr  class="a">
+                    <td>4</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+                <tr  class="a">
+                    <td>
+                        5
+                    </td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+
+                <tr  class="a">
+                    <td>
+                        6
+                    </td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+                <tr  class="a">
+                    <td>
+                        7
+                    </td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+                <tr  class="a">
+                    <td>
+                        8
+                    </td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+                <tr  class="a">
+                    <td>
+                        9
+                    </td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+                <tr class="a">
+                    <td>
+                        10
+                    </td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        <a href="#" class="btn btn-danger rf">REFES</a>
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="bootstrap-paginator.js"></script>
+        <script>
+            $(document).ready(function () {
+//                $('#example1').bootstrapSimpleTablePaginator({
+//                    show: 3,
+//                    afterChange: function(current, page, items, table){
+//                        console.log(items);
+//                    },
+//                    labels:{
+//                        next: '<span class="glyphicon glyphicon-ok"></span>'
+//                    }
+//                });
+
+
+                $('.rf').on('click', function(e){
+                    e.preventDefault();
+                    $('.a').remove();
+                    console.log($('#example1').bootstrapSimpleTablePaginator());
+                    var pagination = $('#example1').bootstrapSimpleTablePaginator('refresh');
+//                    pagination.bootstrapSimpleTablePaginator('refresh');
+                });
+
+            });
+        </script>
+    </body>
+</html>
